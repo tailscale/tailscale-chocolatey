@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>tailscale</id>
+    <version>0.98.0</version>
+    <packageSourceUrl>https://github.com/zombiezen/tailscale-choco</packageSourceUrl>
+    <owners>zombiezen</owners>
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>Tailscale</title>
+    <authors>Tailscale, Inc.</authors>
+    <projectUrl>https://tailscale.com/</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/tailscale.png</iconUrl>-->
+    <copyright>© 2020 Tailscale, Inc.</copyright>
+    <licenseUrl>https://tailscale.com/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://tailscale.com/kb/</docsUrl>
+    <bugTrackerUrl>https://github.com/tailscale/tailscale/issues</bugTrackerUrl>
+    <tags>tailscale wireguard vpn</tags>
+    <summary>Tailscale makes private networks easy.</summary>
+    <description>The Tailscale client allows you to connect all your devices using WireGuard®, without the hassle. Tailscale makes it as easy as installing an app and signing in.
+    
+WireGuard is a registered trademark of Jason A. Donenfeld.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
