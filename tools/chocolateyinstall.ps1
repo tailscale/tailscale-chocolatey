@@ -1,6 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+Get-ChildItem -Path "$toolsDir\tailscale.cer" | Import-Certificate -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
+
 $url        = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-0.98-0.exe'
 
 $packageArgs = @{
