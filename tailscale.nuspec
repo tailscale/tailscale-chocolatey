@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tailscale</id>
-    <version>0.100.0-107</version>
+    <version>0.100.0.107</version>
     <packageSourceUrl>https://github.com/zombiezen/tailscale-choco</packageSourceUrl>
     <owners>zombiezen</owners>
 
