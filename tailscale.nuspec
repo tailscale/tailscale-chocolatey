@@ -22,7 +22,7 @@
     <tags>tailscale wireguard vpn</tags>
     <summary>Tailscale makes private networks easy.</summary>
     <description>The Tailscale client allows you to connect all your devices using WireGuard®, without the hassle. Tailscale makes it as easy as installing an app and signing in.
-    
+
 WireGuard is a registered trademark of Jason A. Donenfeld.</description>
   </metadata>
   <files>
