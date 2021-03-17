@@ -6,6 +6,7 @@ Get-ChildItem -Path "$toolsDir\tailscale.cer" | Import-Certificate -CertStoreLoc
 
 $url = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.6.0.exe'
 
+
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   unzipLocation  = $toolsDir
