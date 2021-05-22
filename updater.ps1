@@ -1,9 +1,9 @@
 $channel = "https://pkgs.tailscale.com/stable/"
 
-$url = $channel + ((Invoke-WebRequest $channel).links | where-object { $_.href -like "*.exe" }).href
+$meta = Invoke-WebRequest ($channel + "?mode=json&os=windows") | ConvertFrom-Json
 
-$null = $url -match "\d*\.\d*\.\d*"
-$version = $Matches[0]
+$url = $channel + $meta.Exes[0]
+$version = $meta.Version
 
 $hash = (Get-FileHash -Algorithm SHA256 -InputStream ([System.Net.WebClient]::new().OpenRead($url))).Hash.ToLower()
 
