@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 Get-ChildItem -Path "$toolsDir\tailscale.cer" | Import-Certificate -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 
-$url = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.8.4.exe'
+$url = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.8.5.exe'
 
 
 $packageArgs = @{
@@ -15,7 +15,7 @@ $packageArgs = @{
 
   softwareName   = 'Tailscale'
 
-  checksum       = 'f50df526d2e71ee664aae708e710c7da3a59a043dda1c02df1f35825fb85a309'
+  checksum       = 'eae1328cb6e3e19301a9e7d68830ac69f88b74456958e381dd5080b8c509953b'
   checksumType   = 'sha256'
 
   silentArgs     = '/S'
