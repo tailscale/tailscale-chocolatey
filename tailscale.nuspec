@@ -4,10 +4,9 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tailscale</id>
-    <version>1.8.3</version>
+    <version>1.8.5</version>
     <packageSourceUrl>https://github.com/zombiezen/tailscale-choco</packageSourceUrl>
     <owners>zombiezen</owners>
-
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>Tailscale</title>
