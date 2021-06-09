@@ -12,7 +12,6 @@
     <title>Tailscale</title>
     <authors>Tailscale, Inc.</authors>
     <projectUrl>https://tailscale.com/</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/tailscale.png</iconUrl>-->
     <copyright>© 2020 Tailscale, Inc.</copyright>
     <licenseUrl>https://tailscale.com/terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -23,6 +22,7 @@
     <description>The Tailscale client allows you to connect all your devices using WireGuard®, without the hassle. Tailscale makes it as easy as installing an app and signing in.
 
 WireGuard is a registered trademark of Jason A. Donenfeld.</description>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tailscale/tailscale-chocolatey@main/icon/Tailscale.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
