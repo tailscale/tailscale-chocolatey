@@ -15,7 +15,7 @@ $packageArgs = @{
 
   softwareName   = 'Tailscale'
 
-  checksum       = 'ef280ca5b3bd3c2abc315d94c6cf5f1054fe7f1cf0c97b6272440659b748456e'
+  checksum       = '23301d34779d8900f4c126a71bec127c92dad5ae8c5f30efcf241ac78ed11be6'
   checksumType   = 'sha256'
 
   silentArgs     = '/S'
