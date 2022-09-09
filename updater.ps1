@@ -9,9 +9,9 @@ $hash = (Get-FileHash -Algorithm SHA256 -InputStream ([System.Net.WebClient]::ne
 
 # Update the nuspec
 $nuspec = New-Object xml
-$nuspec.Load("./tailscale.nuspec")
+$nuspec.Load("$PSScriptRoot/tailscale.nuspec")
 $nuspec.package.metadata.version = $version
-$nuspec.Save("./tailscale.nuspec")
+$nuspec.Save("$PSScriptRoot/tailscale.nuspec")
 
 # Update the installer script
 $installer = Get-Content "./tools/chocolateyinstall.ps1"
