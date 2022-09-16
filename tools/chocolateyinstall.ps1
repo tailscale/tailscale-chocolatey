@@ -4,7 +4,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 Get-ChildItem -Path "$toolsDir\tailscale.cer" | Import-Certificate -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 
-$url = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.30.1.exe'
+$url = 'https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.30.2.exe'
 
 
 $packageArgs = @{
@@ -15,7 +15,7 @@ $packageArgs = @{
 
   softwareName   = 'Tailscale'
 
-  checksum       = 'c866235f37c6e1501d0da98a09baa300889c1590ac0200e736733c788d054016'
+  checksum       = '0bc0224315950e15202d635a5cd7360caef25d3625447ccde2bd371196a8425a'
   checksumType   = 'sha256'
 
   silentArgs     = '/S'
