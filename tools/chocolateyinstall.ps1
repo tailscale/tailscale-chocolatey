@@ -17,20 +17,20 @@ $packageArgs = @{
 if ($env:PROCESSOR_IDENTIFIER.StartsWith('ARMv')) {
   # Windows on ARM
   $packageArgs += @{
-    Url          = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.2-arm64.msi'
-    Checksum     = '9d397029a36167b3cf98680298a6ae716dcfe91ffc57cf96bd71d9d31bf572c1'
+    Url          = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.3-arm64.msi'
+    Checksum     = '169de98dd1b29e67464ceeb4a93a998e4cad167d24312afa74170530dc98a50e'
     ChecksumType = 'sha256'
   }
 }
 else {
   # Windows on x86 or x64
   $packageArgs += @{
-    Url            = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.2-x86.msi'
-    Checksum       = '550a902f1a4fd880d9ce7d6800bfc62004804b43ad8ba552aa17e7322c630f9f'
+    Url            = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.3-x86.msi'
+    Checksum       = 'd2824b4b4deac7e64071d2557db4231f9c88aaa0ff6841e201923c0da87dd6ed'
     ChecksumType   = 'sha256'
 
-    Url64Bit       = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.2-amd64.msi'
-    Checksum64     = 'f5e1fbfe71ea1ad30dd210a4ea2952e9bf8d6fd00a41e5fcbe2f73568784ba94'
+    Url64Bit       = 'https://pkgs.tailscale.com/stable/tailscale-setup-1.38.3-amd64.msi'
+    Checksum64     = '88a23187f98fcda4194922b7bc79f026c976b9109ee740e5f1e58d8ccc7e13ec'
     ChecksumType64 = 'sha256'
   }
 }
