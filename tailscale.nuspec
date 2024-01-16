@@ -5,14 +5,14 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tailscale</id>
     <version>1.56.1</version>
-    <packageSourceUrl>https://github.com/zombiezen/tailscale-choco</packageSourceUrl>
-    <owners>zombiezen</owners>
+    <packageSourceUrl>https://github.com/tailscale/tailscale-chocolatey</packageSourceUrl>
+    <owners>Tailscale, Inc.</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>Tailscale</title>
     <authors>Tailscale, Inc.</authors>
     <projectUrl>https://tailscale.com/</projectUrl>
-    <copyright>© 2020 Tailscale, Inc.</copyright>
+    <copyright>Copyright © Tailscale, Inc. and Contributors.</copyright>
     <licenseUrl>https://tailscale.com/terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://tailscale.com/kb/</docsUrl>

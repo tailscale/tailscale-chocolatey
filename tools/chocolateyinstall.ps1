@@ -2,16 +2,14 @@ $ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-Get-ChildItem -Path "$toolsDir\tailscale.cer" | Import-Certificate -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
-
 $packageArgs = @{
   SoftwareName   = 'Tailscale'
   PackageName    = $env:ChocolateyPackageName
   UnzipLocation  = $toolsDir
   FileType       = 'msi'
 
-  silentArgs     = '/quiet'
-  validExitCodes = @(0)
+  SilentArgs     = '/quiet'
+  ValidExitCodes = @(0)
 }
 
 if ($env:PROCESSOR_IDENTIFIER.StartsWith('ARMv')) {
