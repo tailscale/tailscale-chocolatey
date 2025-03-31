@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tailscale</id>
-    <version>1.80.2</version>
+    <version>1.82.0</version>
     <packageSourceUrl>https://github.com/tailscale/tailscale-chocolatey</packageSourceUrl>
     <owners>Tailscale, Inc.</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
