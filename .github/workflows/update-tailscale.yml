@@ -1,0 +1,48 @@
+name: Update Tailscale Chocolatey package
+
+on:
+  schedule:
+    - cron: '17 8 * * *'  # Daily at 08:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-tailscale-chocolatey
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch newest stable Windows MSI version and checksums
+        run: python .github/scripts/update_tailscale.py
+      - name: Read package version
+        id: package
+        shell: pwsh
+        run: |
+          [xml]$nuspec = Get-Content -Raw tailscale.nuspec
+          "version=$($nuspec.package.metadata.version)" >> $env:GITHUB_OUTPUT
+      - name: Validate Chocolatey package
+        run: choco pack tailscale.nuspec --outputdirectory "${{ runner.temp }}"
+      - name: Propose update for review
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: automation/tailscale-windows-stable
+          delete-branch: true
+          add-paths: |
+            tailscale.nuspec
+            tools/chocolateyinstall.ps1
+          commit-message: 'Update to version ${{ steps.package.outputs.version }}'
+          title: 'chore: update Tailscale Chocolatey package'
+          body: |
+            This pull request was generated from the **official Tailscale stable Windows feed**.
+            - Updated `tailscale.nuspec` and the x86, amd64, and arm64 MSI URLs.
+            - Updated pinned SHA256 checksums using Tailscale's `.sha256` files.
